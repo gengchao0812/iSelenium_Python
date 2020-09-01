@@ -34,10 +34,10 @@ class ISelenium(unittest.TestCase):
         if using_headless is not None and using_headless.lower() == 'true':
             print('使用无界面方式运行')
             chrome_options.add_argument("--headless")
-        #
-        # self.driver = webdriver.Chrome(executable_path=config.get('driver', 'chrome_driver'),
-        #                                options=chrome_options)
-        self.driver = webdriver.Chrome()
+
+        self.driver = webdriver.Chrome(executable_path='C:\\Users\\admin\\chromedriver.exe',
+                                       options=chrome_options)
+        # self.driver = webdriver.Chrome()
 
     def test_webui_1(self):
         """ 测试用例1，验证'今日头条'关键词在百度上的搜索结果
