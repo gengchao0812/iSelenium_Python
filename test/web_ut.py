@@ -10,18 +10,18 @@ from selenium.webdriver.chrome.options import Options
 
 class ISelenium(unittest.TestCase):
     # 读入配置文件
-    def get_config(self):
-        config = configparser.ConfigParser()
-        # config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
-        config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
-        # print(config.get('driver', 'chrome_driver'))
-        return config
+    # def get_config(self):
+    #     config = configparser.ConfigParser()
+    #     # config.read(os.path.join(os.environ['HOME'], 'iselenium.ini'))
+    #     config.read(os.path.join(os.environ['HOMEPATH'], 'iselenium.ini'))
+    #     # print(config.get('driver', 'chrome_driver'))
+    #     return config
 
     def tearDown(self):
         self.driver.quit()
 
     def setUp(self):
-        config = self.get_config()
+        # config = self.get_config()
 
         # 控制是否采用无界面形式运行自动化测试
         try:
